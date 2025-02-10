@@ -1,0 +1,129 @@
+[
+    {
+        "xtype": "numberfield",
+        "minValue": "1",
+        "maxValue": "100",
+        "value": "1",
+        "width": 200,
+        "name": "index",
+        "fieldLabel": "#Index",
+        "tooltip": "#Index number"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Name",
+        "name": "name",
+        "anchor": "100%"
+    }, 
+    {
+        "xtype": "g-field-combobox",
+        "fieldLabel": "#Parent item menu",
+        "tooltip": "#Menu items are added to the menu section. If you are adding a menu section, then select: no selection",
+        "name": "parentId",
+        "hiddenName": "parentId",
+        "store": {
+            "fields": ["id", "name"],
+            "proxy": {
+                "type": "ajax",
+                "url": "@comboStoreUrl",
+                "extraParams": {"combo": "parentMenuItem"},
+                "reader": {
+                    "type": "array",
+                    "rootProperty": "data"
+                }
+            }
+        },
+        "displayField": "name",
+        "valueField": "id",
+        "minChars": 3,
+        "queryParam": "q",
+        "queryMode": "remote",
+        "editable": false,
+        "anchor": "100%",
+        "allowBlank": false
+    },
+    {
+        "xtype": "g-field-combobox",
+        "fieldLabel": "#Plugin",
+        "tooltip": "#A plugin whose contents will be displayed in the current menu item/section",
+        "name": "plugin",
+        "hiddenName": "plugin",
+        "store": {
+            "fields": ["id", "name"],
+            "proxy": {
+                "type": "ajax",
+                "url": "@comboStoreUrl",
+                "extraParams": {"combo": "plugin"},
+                "reader": {
+                    "type": "array",
+                    "rootProperty": "data"
+                }
+            }
+        },
+        "displayField": "name",
+        "valueField": "id",
+        "minChars": 3,
+        "queryParam": "q",
+        "queryMode": "remote",
+        "anchor": "100%",
+        "editable": false
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Icon",
+        "tooltip": "#CSS class of icon in menu styles",
+        "anchor": "100%",
+        "name": "asIcon"
+    },
+    {
+        "xtype": "label",
+        "ui": "header-line",
+        "text": "#Menu item type"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Type",
+        "tooltip": "#Type name",
+        "name": "type"
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "#Attributes",
+        "tooltip": "#Type attributes",
+        "name": "typeArgs",
+        "anchor": "100%"
+    },
+    {
+        "xtype": "label",
+        "ui": "header-line",
+        "text": "#Menu item handler"
+    },
+    {
+        "xtype": "textfield",
+        "fieldLabel": "#Name",
+        "tooltip": "#Handler name",
+        "name": "handler",
+        "anchor": "100%"
+    },
+    {
+        "xtype": "textarea",
+        "fieldLabel": "#Arguments",
+        "tooltip": "#Arguments handler",
+        "name": "handlerArgs",
+        "anchor": "100%"
+    },
+    {
+        "xtype": "checkbox",
+        "ui": "switch",
+        "fieldLabel": "#enabled",
+        "checked": true,
+        "name": "enabled"
+    },
+    {
+        "xtype": "checkbox",
+        "ui": "switch",
+        "fieldLabel": "#visible",
+        "checked": true,
+        "name": "visible"
+    }
+]
