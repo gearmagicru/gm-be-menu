@@ -3,7 +3,7 @@
 Модуль предназначен для организации многоуровневого главного меню Панели управления GM Panel.
 
 ## Скриншот
-<img src="https://github.com/gearmagicru/gm-be-menu/blob/master/assets/help/grid.png?raw=true" width="100%">
+<img src="https://github.com/gearmagicru/gm-be-menu/blob/master/assets/help/grid.png?raw=true" style="max-width:100%">
 
 ## Установка
 
