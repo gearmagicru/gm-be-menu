@@ -1,6 +1,6 @@
 <?php
 /**
- * Страница "Форма редактирования пункта меню".
+ * Страница "Форма добавления / редактирования пункта меню".
  * 
  * Русская локализации.
  * 
@@ -18,16 +18,24 @@
     <p>Форма появляется после нажатия на кнопку <b>"Добавить"</b> панели инструментов списка пунктов меню или выбора пункта <b>"Редактировать"</b> контекстного меню выбранной записи.</p>
     <h2>Поля формы</h2>
     <ul class="g-help-list">
-        <li><b>Порядок.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Название.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Раздел меню.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Плагин.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Значок.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Тип пункта меню / Тип.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Тип пункта меню / Атрибуты.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Обработчик события / Название.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Обработчик события / Аргументы.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Доступен.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua;</li>
-        <li><b>Видим.</b> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</li>
+        <li><span class="g-help-fld g-help-fld_spinner"></span> <b>Порядок.</b> Порядковый номер пункта меню. Применяется для сортировки пунктов в пределах его вложенности;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Название.</b> Название пункта меню;</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Раздел меню.</b> Раздел меню указывают, если необходимо добавить подпункт меню в пункт (раздел);</li>
+        <li><span class="g-help-fld g-help-fld_combo"></span> <b>Плагин.</b> Если выбран плагин, то в созданный вами пункт меню будут добавлены подпункты в соответствии с выбранным плагином;</li>
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Значок.</b> CSS класс значка пункта меню;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Доступен.</b> Если пункт меню не доступен, он не будет выделяться;</li>
+        <li><span class="g-help-fld g-help-fld_checkbox"></span> <b>Видим.</b> Показать или скрыть пункт меню.</li>
+    </ul>
+
+    <h3>Тип пункта меню</h3>
+    <ul class="g-help-list">
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Тип.</b> Тип (xtype объекта <a target="_blank" href="https://docs.sencha.com/extjs/5.1.1/api/Ext.menu.Item.html">Ext.menu.Item</a>) пункта меню. Если не указан, то применяется "menuitem";</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Атрибуты.</b> Атрибуты - это свойства объекта <a target="_blank" href="https://docs.sencha.com/extjs/5.1.1/api/Ext.menu.Item.html">Ext.menu.Item</a> пункта меню, указывают через разделитель ",". Например, "width=100;height=20".</li>
+    </ul>
+
+    <h3>Обработчик события пункта меню</h3>
+    <ul class="g-help-list">
+        <li><span class="g-help-fld g-help-fld_text"></span> <b>Название.</b> Название события (функция JavaScript).</li>
+        <li><span class="g-help-fld g-help-fld_textarea"></span> <b>Аргументы.</b> Аргументы передаваемые в событие указываются через разделитель ",". Например, "url=https://domain.com;action=open".</li>
     </ul>
 </article>
